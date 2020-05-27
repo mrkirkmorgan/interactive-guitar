@@ -19,7 +19,7 @@ document.getElementById("guitar-backdrop").onload = function() {
   
   var i;
   var note_coords = []
-  var third = ((853 / 3) * 1805) * 4
+  var third = Math.floor(((853 / 3) * 1805) * 4)
   var lastThird = imgData.data.length - third;
   
   for (i = third; i < lastThird; i += 4) {
