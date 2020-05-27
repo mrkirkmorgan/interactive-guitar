@@ -5,3 +5,8 @@ body, html {
 #guitar-backdrop {
   z-index: -1;
 }
+
+.note {
+  position: relative;
+  margin: 0;
+}
