@@ -9,8 +9,8 @@ var allNotes = [
 
 document.getElementById("guitar-backdrop").onload = function() {
   var canvas = document.createElement("canvas");
-  canvas.width = 1920;
-  canvas.height = 1080;
+  canvas.width = 1805;
+  canvas.height = 853;
 
   var ctx = canvas.getContext("2d");
   var img = document.getElementById("guitar-backdrop");
@@ -50,8 +50,8 @@ function createInteractableNote(coordinates) {
 
 function getCoordLocation(i) {
   var pixel = i / 4;
-  var row = Math.floor(pixel / 1920);
-  var column = pixel - (row * 1920);
+  var row = Math.floor(pixel / 1805);
+  var column = pixel - (row * 1805);
 
   return [column, row];
 }
