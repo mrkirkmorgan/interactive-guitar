@@ -47,7 +47,7 @@ function createInteractableNote(coordinates) {
   note.type = "checkbox";
 
   var noteStyle = document.createElement("span");
-  note.className = "checkmark";
+  noteStyle.className = "checkmark";
 
 
   note.id = allNotes.shift();
