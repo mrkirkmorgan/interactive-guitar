@@ -34,5 +34,5 @@ function getCoordLocation(i) {
   var row = Math.floor(pixel / 1920);
   var column = pixel - (row * 1920);
 
-  return [row, column];
+  return [column, row];
 }
