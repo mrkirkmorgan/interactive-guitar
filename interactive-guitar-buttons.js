@@ -13,7 +13,7 @@ document.getElementById("guitar-backdrop").onload = function() {
   var i;
   var note_coords = []
   
-  for (i = 0; i < imgData.data.length; i += 4) {
+  for (i = 2764800; i < imgData.data.length - 2764800; i += 4) {
     if (imgData.data[i] == 255 && imgData.data[i+1] == 0 && imgData.data[i+2] == 0) {
       var coords = getCoordLocation(i);
       note_coords.concat(coords);
