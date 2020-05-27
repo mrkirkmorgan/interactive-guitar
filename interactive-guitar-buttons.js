@@ -39,7 +39,7 @@ function createInteractableNote(coordinates) {
   var note = document.createElement("input");
   note.type = "checkbox";
   note.id = allNotes.shift();
-  note.class = "note";
+  note.className = "note";
   note.style.left = coordinates[0] + "px";
   note.style.top = coordinates[1] + "px";
 
