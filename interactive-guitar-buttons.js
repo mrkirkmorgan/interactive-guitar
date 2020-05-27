@@ -31,7 +31,7 @@ document.getElementById("guitar-backdrop").onload = function() {
 
 function getCoordLocation(i) {
   var pixel = i / 4;
-  var row = floor(pixel / 1920);
+  var row = Math.floor(pixel / 1920);
   var column = pixel - (row * 1920);
 
   return [row, column];
