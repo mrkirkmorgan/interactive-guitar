@@ -18,7 +18,6 @@ document.getElementById("guitar-backdrop").onload = function() {
       var coords = getCoordLocation(i);
       note_coords.concat(coords);
       ctx.arc(coords[0], coords[1], 9, 0, 2 * Math.PI);
-      ctx.stroke();
     }
   }
 
