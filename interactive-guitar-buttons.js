@@ -39,7 +39,7 @@ document.getElementById("guitar-backdrop").onload = function() {
 
 function createInteractableNote(coordinates) {
   var noteBox = document.createElement("div");
-  noteBox.className = "note";
+  noteBox.className = "noteBox";
   noteBox.style.left = coordinates[0] + "px";
   noteBox.style.top = coordinates[1] + "px";
 
@@ -52,9 +52,11 @@ function createInteractableNote(coordinates) {
 
   note.id = allNotes.shift();
 
+  noteBox.appendChild(note);
+  noteBox.appendChild(noteStyle);
 
   var body = document.getElementsByTagName("body")[0];
-  body.appendChild(note);
+  body.appendChild(noteBox);
 }
 
 
