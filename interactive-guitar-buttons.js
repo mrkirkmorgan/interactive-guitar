@@ -17,7 +17,9 @@ document.getElementById("guitar-backdrop").onload = function() {
     if (imgData.data[i] == 255 && imgData.data[i+1] == 0 && imgData.data[i+2] == 0) {
       var coords = getCoordLocation(i);
       note_coords.concat(coords);
+      ctx.beginPath();
       ctx.arc(coords[0], coords[1], 9, 0, 2 * Math.PI);
+      ctx.stroke();
     }
   }
 
