@@ -22,7 +22,7 @@ document.getElementById("guitar-backdrop").onload = function() {
   var third = Math.floor(((853 / 3) * 1805) * 4)
   var lastThird = imgData.data.length - third;
   
-  for (i = third; i < lastThird; i += 4) {
+  for (i = 0; i < imgData.data.length; i += 4) {
     if (imgData.data[i] == 255 && imgData.data[i+1] == 0 && imgData.data[i+2] == 0) {
       var coords = getCoordLocation(i);
       createInteractableNote(coords);
