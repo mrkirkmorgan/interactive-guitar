@@ -38,12 +38,20 @@ document.getElementById("guitar-backdrop").onload = function() {
 }
 
 function createInteractableNote(coordinates) {
+  var noteBox = document.createElement("div");
+  noteBox.className = "note";
+  noteBox.style.left = coordinates[0] + "px";
+  noteBox.style.top = coordinates[1] + "px";
+
   var note = document.createElement("input");
   note.type = "checkbox";
+
+  var noteStyle = document.createElement("span");
+  note.className = "checkmark";
+
+
   note.id = allNotes.shift();
-  note.className = "note";
-  note.style.left = coordinates[0] + "px";
-  note.style.top = coordinates[1] + "px";
+
 
   var body = document.getElementsByTagName("body")[0];
   body.appendChild(note);
