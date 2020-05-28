@@ -53,7 +53,7 @@ function createInteractableNote(coordinates) {
 
   noteButton.innerHTML = getNote(id);
 
-  var noteContainer = document.getElementsByTagName("notes")[0];
+  var noteContainer = document.getElementsByClassName("notes")[0];
   noteContainer.appendChild(noteButton);
 }
 
