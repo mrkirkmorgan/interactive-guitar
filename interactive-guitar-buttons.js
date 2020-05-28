@@ -100,3 +100,14 @@ function getCoordLocation(i) {
 
   return [column, row];
 }
+
+function addNote(id) {
+  var string = id.substring(0, 1).toUpperCase();
+  var fret = parseInt(id.substring(1));
+
+  if(selectedNotes[string] == null) {
+    selectedNotes[string] = [fret];
+  } else {
+    selectedNotes[string].add(fret);
+  }
+}
