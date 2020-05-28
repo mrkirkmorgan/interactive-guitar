@@ -13,6 +13,8 @@ var chromaticScale = [
   "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"
 ];
 
+let chordNotes = [];
+
 var selectedNotes = new Map();
 selectedNotes.set("E", null);
 selectedNotes.set("A", null);
@@ -132,7 +134,6 @@ function removeNote(id) {
 }
 
 function calculateNote() {
-  var notes = []
   for (var string in selectedNotes.keys()) {
     var stringNotes = selectedNotes[string];
 
@@ -140,7 +141,7 @@ function calculateNote() {
       var startPoint = chromaticScale.indexOf(string);
       var topFret = Math.max(stringNotes);
       var note = chromaticScale[(startPoint + topFret) % chromaticScale.length]
-      notes.push(note);
+      chordNotes.push(note);
     }
   }
 }
