@@ -34,7 +34,7 @@ document.getElementById("guitar-backdrop").onload = function() {
     for (j = third; j < twoThird; j++) {
       var value = (i + (j * canvas.width)) * 4;
       if (imgData.data[value] == 255 && imgData.data[value+1] == 0 && imgData.data[value+2] == 0) {
-        var coords = [i, j + third];
+        var coords = [i, j];
         createInteractableNote(coords);
         note_coords.concat(coords);
       }
