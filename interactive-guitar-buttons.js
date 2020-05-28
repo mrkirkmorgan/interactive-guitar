@@ -53,8 +53,8 @@ document.getElementById("guitar-backdrop").onload = function() {
 
   }
 
-  var body = document.getElementsByTagName("body")[0];
-  body.appendChild(canvas);
+  var guitar = document.getElementsByClassName("interactive-guitar")[0];
+  guitar.appendChild(canvas);
 }
 
 function createInteractableNote(coordinates) {
@@ -114,7 +114,7 @@ function addNote(id) {
   var string = id.substring(0, 1).toUpperCase();
   var fret = parseInt(id.substring(1));
 
-  if(selectedNotes[string] == null) {
+  if(selectedNotes.get(string) == null) {
     selectedNotes.set(string, [fret]);
   } else {
     var array = selectedNotes.get(string);
@@ -137,7 +137,7 @@ function removeNote(id) {
 
 function calculateNote() {
   var notes = []
-  for (var string in selectedNotes.keys()) {
+  for (var string in selectedNotes) {
     var stringNotes = selectedNotes.get(string);
 
     if (stringNotes != null) {
@@ -147,6 +147,6 @@ function calculateNote() {
       notes.push(note);
     }
   }
-  
+
   chordNotes = notes;
 }
