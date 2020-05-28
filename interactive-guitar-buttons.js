@@ -111,3 +111,10 @@ function addNote(id) {
     selectedNotes[string].add(fret);
   }
 }
+
+function removeNote(id) {
+  var string = id.substring(0, 1).toUpperCase();
+  var fret = parseInt(id.substring(1));
+
+  selectedNotes[string].remove(fret);
+}
