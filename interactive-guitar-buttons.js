@@ -64,6 +64,15 @@ function createInteractableNote(coordinates) {
 
   noteButton.onclick = function(e) {
     var id = e.target.id
+    var button = document.getElementById(id);
+
+    if(button.classList.contains("selected")) {
+      button.classList.remove("selected");
+      //removeNote(id);
+    } else {
+      button.classList.add("selected");
+      //addNote(id);
+    }
 
   }
 

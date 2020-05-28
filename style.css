@@ -33,3 +33,7 @@ canvas {
   background-color: lightgreen;
   transition-duration: 1s;
 }
+
+.selected {
+  background-color: green;
+}
