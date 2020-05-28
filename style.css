@@ -5,6 +5,7 @@ body, html {
 #guitar-backdrop {
   position: absolute;
   z-index: 0;
+  visibility: hidden;
 }
 
 canvas {
