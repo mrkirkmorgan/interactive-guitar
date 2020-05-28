@@ -7,6 +7,10 @@ var allNotes = [
   "e22", "e21", "e20", "e19", "e18", "e17", "e16", "e15", "e14", "e13", "e12", "e11", "e10", "e9", "e8", "e7", "e6", "e5", "e4", "e3", "e2", "e1", "e0",
 ]
 
+var chromaticScale = [
+  "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"
+]
+
 document.getElementById("guitar-backdrop").onload = function() {
   var canvas = document.createElement("canvas");
   canvas.width = 1805;
@@ -38,27 +42,32 @@ document.getElementById("guitar-backdrop").onload = function() {
 }
 
 function createInteractableNote(coordinates) {
-  var noteBox = document.createElement("div");
-  noteBox.className = "noteBox";
-  noteBox.style.left = coordinates[0] + "px";
-  noteBox.style.top = coordinates[1] + "px";
 
-  var note = document.createElement("input");
-  note.type = "checkbox";
+  var noteButton = document.createElement("span");
+  var id = allNotes.shift()
+  noteButton.id = id;
+  noteButton.className = "noteButton";
 
-  var noteStyle = document.createElement("span");
-  noteStyle.className = "checkmark";
+  noteButton.style.left = coordinates[0] + "px";
+  noteButton.style.top = coordinates[1] + "px";
 
+  noteButton.innerHTML = getNote(id);
 
-  note.id = allNotes.shift();
-
-  noteBox.appendChild(note);
-  noteBox.appendChild(noteStyle);
-
-  var body = document.getElementsByTagName("body")[0];
-  body.appendChild(noteBox);
+  var noteContainer = document.getElementsByTagName("notes")[0];
+  noteContainer.appendChild(noteButton);
 }
 
+function getNote(id) {
+  var string = str.toUppercase(id.substring(0, 1));
+  var fret = id.substring(1);
+
+  if(fret == 0) {
+    return string;
+  } else {
+    var startPoint = chromaticScale.findIndex(string);
+    return chromaticScale.find((startPoint + fret) % chromaticScale.length);
+  }
+}
 
 function getCoordLocation(i) {
   var pixel = i / 4;
