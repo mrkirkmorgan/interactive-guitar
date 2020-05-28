@@ -64,8 +64,8 @@ function getNote(id) {
   if(fret == 0) {
     return string;
   } else {
-    var startPoint = chromaticScale.findIndex(string);
-    return chromaticScale.find((startPoint + fret) % chromaticScale.length);
+    var startPoint = chromaticScale.indexOf(string);
+    return chromaticScale[(startPoint + fret) % chromaticScale.length];
   }
 }
 
