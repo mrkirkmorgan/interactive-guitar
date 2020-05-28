@@ -11,6 +11,8 @@ var chromaticScale = [
   "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"
 ]
 
+var selectedNotes = {"E": null, "A": null, "D": null, "G": null, "B": null, "e": null}
+
 document.getElementById("guitar-backdrop").onload = function() {
   var canvas = document.createElement("canvas");
   canvas.width = 1805;
@@ -19,7 +21,7 @@ document.getElementById("guitar-backdrop").onload = function() {
   var ctx = canvas.getContext("2d");
   var img = document.getElementById("guitar-backdrop");
   ctx.drawImage(img, 0, 0);
-  var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  var imgData = ctx.getImageData(0, canvas.height / 3, canvas.width, canvas.height);
   
   var i;
   var note_coords = []
@@ -52,6 +54,11 @@ function createInteractableNote(coordinates) {
   noteButton.style.top = coordinates[1] + "px";
 
   noteButton.innerHTML = getNote(id);
+
+  noteButton.onclick = function(e) {
+    var id = e.target.id
+
+  }
 
   var noteContainer = document.getElementsByClassName("notes")[0];
   noteContainer.appendChild(noteButton);
