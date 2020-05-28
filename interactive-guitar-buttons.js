@@ -118,7 +118,7 @@ function addNote(id) {
     selectedNotes.set(string, [fret]);
   } else {
     var array = selectedNotes.get(string);
-    selectedNotes.set(string, array.push(fret));
+    selectedNotes.set(string, array.concat(fret));
   }
 }
 
