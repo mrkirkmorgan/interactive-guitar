@@ -108,7 +108,7 @@ function addNote(id) {
   if(selectedNotes[string] == null) {
     selectedNotes[string] = [fret];
   } else {
-    selectedNotes[string].concat(fret);
+    selectedNotes[string] = selectedNotes[string].concat(fret);
   }
 }
 
