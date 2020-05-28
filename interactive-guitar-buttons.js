@@ -21,7 +21,7 @@ document.getElementById("guitar-backdrop").onload = function() {
   var ctx = canvas.getContext("2d");
   var img = document.getElementById("guitar-backdrop");
   ctx.drawImage(img, 0, 0);
-  var imgData = ctx.getImageData(0, canvas.height / 3, canvas.width, canvas.height);
+  var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   
   var i;
   var note_coords = []
