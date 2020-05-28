@@ -3,10 +3,17 @@ body, html {
 }
 
 #guitar-backdrop {
+  position: absolute;
+  z-index: 0;
+}
+
+canvas {
   z-index: -1;
+  position: absolute;
 }
 
 .noteButton {
+  z-index: 1;
   position: absolute;
   cursor: pointer;
   height: 20px;
