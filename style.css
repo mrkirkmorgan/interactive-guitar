@@ -20,3 +20,8 @@ body, html {
   user-select: none;
   transform: translate(-10px, -10px);
 }
+
+.noteButton:hover {
+  background-color: lightgreen;
+  transition-duration: 1s;
+}
