@@ -134,6 +134,7 @@ function removeNote(id) {
 }
 
 function calculateNote() {
+  var notes = []
   for (var string in selectedNotes.keys()) {
     var stringNotes = selectedNotes[string];
 
@@ -141,7 +142,7 @@ function calculateNote() {
       var startPoint = chromaticScale.indexOf(string);
       var topFret = Math.max(stringNotes);
       var note = chromaticScale[(startPoint + topFret) % chromaticScale.length]
-      chordNotes.push(note);
+      chordNotes = notes;
     }
   }
 }
