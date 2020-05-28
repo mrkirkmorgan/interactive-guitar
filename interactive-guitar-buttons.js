@@ -68,10 +68,10 @@ function createInteractableNote(coordinates) {
 
     if(button.classList.contains("selected")) {
       button.classList.remove("selected");
-      //removeNote(id);
+      removeNote(id);
     } else {
       button.classList.add("selected");
-      //addNote(id);
+      addNote(id);
     }
 
   }
