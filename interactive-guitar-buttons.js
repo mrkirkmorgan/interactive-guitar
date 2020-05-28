@@ -128,7 +128,8 @@ function removeNote(id) {
 
   var array = selectedNotes.get(string);
   var index = array.indexOf(fret);
-  selectedNotes.set(string, array.splice(index, 1));
+  array.splice(index, 1);
+  selectedNotes.set(string, array);
 
   if (selectedNotes.get(string).length == 0) {
     selectedNotes.set(string, null);
@@ -137,7 +138,7 @@ function removeNote(id) {
 
 function calculateNote() {
   var notes = []
-  for (var str in selectedNotes){
+  for (var str of selectedNotes){
     var stringNotes = selectedNotes.get(str);
 
     if (stringNotes != null) {
