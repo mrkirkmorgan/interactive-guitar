@@ -115,9 +115,10 @@ function addNote(id) {
   var fret = parseInt(id.substring(1));
 
   if(selectedNotes[string] == null) {
-    selectedNotes[string] = [fret];
+    selectedNotes.set(string, [fret]);
   } else {
-    selectedNotes[string] = selectedNotes[string].concat(fret);
+    var array = selectedNotes.get(string);
+    selectedNotes.set(string, array.push(fret));
   }
 }
 
@@ -125,24 +126,27 @@ function removeNote(id) {
   var string = id.substring(0, 1).toUpperCase();
   var fret = parseInt(id.substring(1));
 
-  var index = selectedNotes[string].indexOf(fret);
-  selectedNotes[string].splice(index, 1);
+  var array = selectedNotes.get(string);
+  var index = array.indexOf(fret);
+  selectedNotes.set(string, array.splice(index, 1));
 
-  if (selectedNotes[string].length == 0) {
-    selectedNotes[string] = null;
+  if (selectedNotes.get(string).length == 0) {
+    selectedNotes.set(string, null);
   }
 }
 
 function calculateNote() {
   var notes = []
   for (var string in selectedNotes.keys()) {
-    var stringNotes = selectedNotes[string];
+    var stringNotes = selectedNotes.get(string);
 
     if (stringNotes != null) {
       var startPoint = chromaticScale.indexOf(string);
       var topFret = Math.max(stringNotes);
       var note = chromaticScale[(startPoint + topFret) % chromaticScale.length]
-      chordNotes = notes;
+      notes.push(note);
     }
   }
+  
+  chordNotes = notes;
 }
