@@ -111,7 +111,7 @@ function getCoordLocation(i) {
 }
 
 function addNote(id) {
-  var string = id.substring(0, 1).toUpperCase();
+  var string = id.substring(0, 1);
   var fret = parseInt(id.substring(1));
 
   if(selectedNotes.get(string) == null) {
@@ -123,7 +123,7 @@ function addNote(id) {
 }
 
 function removeNote(id) {
-  var string = id.substring(0, 1).toUpperCase();
+  var string = id.substring(0, 1);
   var fret = parseInt(id.substring(1));
 
   var array = selectedNotes.get(string);
