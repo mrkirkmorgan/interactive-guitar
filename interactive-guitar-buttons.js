@@ -13,7 +13,13 @@ var chromaticScale = [
   "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"
 ];
 
-var selectedNotes = {"E": null, "A": null, "D": null, "G": null, "B": null, "e": null};
+var selectedNotes = new Map();
+selectedNotes.set("E", null);
+selectedNotes.set("A", null);
+selectedNotes.set("D", null);
+selectedNotes.set("G", null);
+selectedNotes.set("B", null);
+selectedNotes.set("e", null);
 
 document.getElementById("guitar-backdrop").onload = function() {
   var canvas = document.createElement("canvas");
