@@ -137,11 +137,11 @@ function removeNote(id) {
 
 function calculateNote() {
   var notes = []
-  for (var string in selectedNotes) {
-    var stringNotes = selectedNotes.get(string);
+  for (var str in selectedNotes){
+    var stringNotes = selectedNotes.get(str);
 
     if (stringNotes != null) {
-      var startPoint = chromaticScale.indexOf(string);
+      var startPoint = chromaticScale.indexOf(str);
       var topFret = Math.max(stringNotes);
       var note = chromaticScale[(startPoint + topFret) % chromaticScale.length]
       notes.push(note);
