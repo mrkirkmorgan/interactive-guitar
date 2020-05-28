@@ -108,7 +108,7 @@ function addNote(id) {
   if(selectedNotes[string] == null) {
     selectedNotes[string] = [fret];
   } else {
-    selectedNotes[string].add(fret);
+    selectedNotes[string].concat(fret);
   }
 }
 
@@ -116,5 +116,10 @@ function removeNote(id) {
   var string = id.substring(0, 1).toUpperCase();
   var fret = parseInt(id.substring(1));
 
-  selectedNotes[string].remove(fret);
+  var index = selectedNotes[string].indexOf(fret);
+  selectedNotes[string].splice(index, 1);
+
+  if (selectedNotes[string].length == 0) {
+    selectedNotes[string] = null;
+  }
 }
