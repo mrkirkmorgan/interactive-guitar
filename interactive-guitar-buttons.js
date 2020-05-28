@@ -74,6 +74,7 @@ function createInteractableNote(coordinates) {
       addNote(id);
     }
 
+    calculateNote();
   }
 
   var noteContainer = document.getElementsByClassName("notes")[0];
@@ -121,5 +122,19 @@ function removeNote(id) {
 
   if (selectedNotes[string].length == 0) {
     selectedNotes[string] = null;
+  }
+}
+
+function calculateNote() {
+  var notes = []
+  for (var string in selectedNotes.keys()) {
+    var stringNotes = selectedNotes[string];
+
+    if (stringNotes != null) {
+      var startPoint = chromaticScale.indexOf(string);
+      var topFret = Math.max(stringNotes);
+      var note = chromaticScale[(startPoint + topFret) % chromaticScale.length]
+      notes.push(note);
+    }
   }
 }
