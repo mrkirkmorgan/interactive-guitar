@@ -59,7 +59,7 @@ function createInteractableNote(coordinates) {
 
 function getNote(id) {
   var string = id.substring(0, 1).toUpperCase();
-  var fret = id.substring(1);
+  var fret = parseInt(id.substring(1));
 
   if(fret == 0) {
     return string;

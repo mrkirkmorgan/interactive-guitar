@@ -9,11 +9,14 @@ body, html {
 .noteButton {
   position: absolute;
   cursor: pointer;
-  height: 18px;
-  width: 18px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  background-color: lightgray;
+  border-radius: 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  transform: translate(-9px, -9px);
+  transform: translate(-10px, -10px);
 }
