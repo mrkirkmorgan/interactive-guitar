@@ -143,7 +143,7 @@ function calculateNote() {
 
     if (stringNotes != null) {
       var startPoint = chromaticScale.indexOf(str);
-      var topFret = Math.max(stringNotes);
+      var topFret = Math.max.apply(Math, stringNotes);
       var note = chromaticScale[(startPoint + topFret) % chromaticScale.length]
       notes.push(note);
     }
