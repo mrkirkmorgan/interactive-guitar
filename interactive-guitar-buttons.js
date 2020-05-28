@@ -138,7 +138,7 @@ function removeNote(id) {
 
 function calculateNote() {
   var notes = []
-  for (var str of selectedNotes){
+  for (var str of selectedNotes.keys()) {
     var stringNotes = selectedNotes.get(str);
 
     if (stringNotes != null) {
