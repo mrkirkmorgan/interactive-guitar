@@ -348,7 +348,7 @@ function createDirectory() {
     if (chord.length != currLength) {
       currLength++;
       currNote = "A";
-      directory[currLength] = {};
+      directory[currLength] = {"A": i};
     }
 
     if (chord[0] != currNote) {
