@@ -250,9 +250,6 @@ function calculateNote() {
   return locateChord(notes);
 }
 
-let allChords = [];
-let directory = {};
-
 generateChords();
 createDirectory();
 
