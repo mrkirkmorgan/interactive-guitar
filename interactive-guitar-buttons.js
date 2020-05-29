@@ -121,24 +121,28 @@ let directory = {
 
 function locateChord(chord) {
   chord = sortChord(chord);
-  let nextNote = chromaticScale[(chromaticScale.indexOf(chord[0]) + 1) % chromaticScale.length]
-  let endIdx = directory[chord.length][nextNote]
-  if (endIdx == undefined) {
-    endIdx = directory[chord.length + 1]["A"];
-
+  try {
+    let nextNote = chromaticScale[(chromaticScale.indexOf(chord[0]) + 1) % chromaticScale.length]
+    let endIdx = directory[chord.length][nextNote]
     if (endIdx == undefined) {
-      endIdx = allChords.length; 
+      endIdx = directory[chord.length + 1]["A"];
+  
+      if (endIdx == undefined) {
+        endIdx = allChords.length; 
+      }
     }
-  }
-  let startIdx = directory[chord.length][chord[0]];
-
-  for (let i = startIdx; i < endIdx; i++) {
-    if (arraysEqual(allChords[i][1], chord)) {
-      return allChords[i][0];
+    let startIdx = directory[chord.length][chord[0]];
+  
+    for (let i = startIdx; i < endIdx; i++) {
+      if (arraysEqual(allChords[i][1], chord)) {
+        return allChords[i][0];
+      }
     }
-  }
+  } catch {
 
-  return "This chord is not a real chord.";
+  } finally {
+    return "This chord is not a real chord.";
+  }
 }
 
 function sortChord(chord) {
