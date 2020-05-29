@@ -9,10 +9,6 @@ var allNotes = [
 
 var stringSelector = 0;
 
-var chromaticScale = [
-  "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"
-];
-
 let chordNotes = [];
 
 let threeNoteChords = {
