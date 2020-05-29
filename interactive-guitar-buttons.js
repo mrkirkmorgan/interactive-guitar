@@ -64,10 +64,10 @@ function locateChord(chord) {
     let nextNote = chromaticScale[(chromaticScale.indexOf(chord[0]) + 1) % chromaticScale.length]
     let endIdx = directory[chord.length][nextNote]
     if (endIdx == undefined) {
-      endIdx = directory[chord.length + 1]["A"];
-  
-      if (endIdx == undefined) {
-        endIdx = allChords.length; 
+      if (directory[chord.length + 1] == undefined) {
+        endIdx = allChords.length;
+      } else {
+        endIdx = directory[chord.length + 1]["A"];
       }
     }
     let startIdx = directory[chord.length][chord[0]];
