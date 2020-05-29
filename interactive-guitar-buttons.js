@@ -120,8 +120,8 @@ let directory = {
 
 
 function locateChord(chord) {
-  chord = sortChord(chord);
-  try {
+  if (directory.keys().contains(chord.length)) {
+    chord = sortChord(chord);
     let nextNote = chromaticScale[(chromaticScale.indexOf(chord[0]) + 1) % chromaticScale.length]
     let endIdx = directory[chord.length][nextNote]
     if (endIdx == undefined) {
@@ -138,11 +138,9 @@ function locateChord(chord) {
         return allChords[i][0];
       }
     }
-  } catch {
-
-  } finally {
-    return "This chord is not a real chord.";
   }
+
+  return "This chord is not a real chord.";
 }
 
 function sortChord(chord) {
