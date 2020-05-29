@@ -13,6 +13,10 @@ canvas {
   position: absolute;
 }
 
+.interactive-guitar {
+  position: relative;
+}
+
 .noteButton {
   z-index: 1;
   position: absolute;
