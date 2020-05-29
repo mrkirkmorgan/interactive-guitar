@@ -52,7 +52,11 @@ let chordFormulas = {
   "Major 7th": ["M3", "m3", "M3"],
   "Dominant 7th": ["M3", "m3", "m3"],
   "Minor 7th": ["m3", "M3", "m3"],
-  "7th, flat 5": ["M3", "M2", "M3"]
+  "7th, flat 5": ["M3", "M2", "M3"],
+  "Minor 7th, flat 5": ["m3", "m3", "M3"],
+  "Diminished 7th": ["m3", "m3", "m3"],
+  "Augmented 7th": ["M3", "M3", "M2"],
+  "Suspended 7th": ["P4", "M2", "m3"],
 }
 
 let allChords = [];
