@@ -48,7 +48,7 @@ let chordFormulas = {
   "Minor": ["m3", "M3"],
   "Diminished": ["m3", "m3"],
   "Augmented": ["M3", "M3"],
-  "Suspended": ["P4, M2"],
+  "Suspended": ["P4", "M2"],
   "Major 7th": ["M3", "m3", "M3"],
   "Dominant 7th": ["M3", "m3", "m3"],
   "Minor 7th": ["m3", "M3", "m3"],
