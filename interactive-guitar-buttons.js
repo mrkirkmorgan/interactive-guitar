@@ -120,7 +120,7 @@ let directory = {
 
 
 function locateChord(chord) {
-  if (directory.keys().contains(chord.length)) {
+  if (Object.keys(directory).contains(chord.length.toString())) {
     chord = sortChord(chord);
     let nextNote = chromaticScale[(chromaticScale.indexOf(chord[0]) + 1) % chromaticScale.length]
     let endIdx = directory[chord.length][nextNote]
