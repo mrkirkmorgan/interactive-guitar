@@ -190,7 +190,7 @@ function createInteractableNote(coordinates) {
   /* Pedal Positioning */
   pedalOne.style.left = (x - (pedalSize / 2)) + "px";
   pedalOne.style.top = (y - pedalSize) + "px";
-  pedalOne.style.backgroundColor = "blue";
+  pedalOne.style.backgroundColor = "cyan";
   pedalOne.style.zIndex = 5;
   pedalTwo.style.left = x + "px";
   pedalTwo.style.top = (y - (headSize / 2)) + "px";
@@ -206,7 +206,7 @@ function createInteractableNote(coordinates) {
   pedalFour.style.zIndex = 8;
   pedalFive.style.left = (x - pedalSize) + "px";
   pedalFive.style.top = (y - (headSize / 5)) + "px";
-  pedalFive.style.backgroundColor = "cyan";
+  pedalFive.style.backgroundColor = "blue";
   pedalFive.style.zIndex = 7;
   pedalSix.style.left = x + "px";
   pedalSix.style.top = (y - (headSize / 5)) + "px";
