@@ -167,8 +167,8 @@ function createInteractableNote(coordinates) {
   noteButton.id = id;
   noteButton.className = "noteButton";
 
-  noteButton.style.left = coordinates[0] + "px";
-  noteButton.style.top = coordinates[1] + "px";
+  noteButton.style.left = (coordinates[0] - 57) + "px";
+  noteButton.style.top = (coordinates[1] - 439) + "px";
 
   noteButton.innerHTML = getNote(id);
 
