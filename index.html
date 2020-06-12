@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="interactive-guitar">
-      <img id="guitar-backdrop" src="test-guitar.png" alt="A Guitar">
-      <div class="notes">
-      </div>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider"></span>
+    </label>
+    <img id="guitar-backdrop" src="test-guitar.png" alt="A Guitar">
+    <div class="notes">
+    </div>
     </div>
     <h1 class="chord">Chord: </h1>
+    <div class="tab"></div>
+    <div class="progression"></div>
     <script src="interactive-guitar-buttons.js"></script>
   </body>
 </html>
