@@ -70,8 +70,6 @@ input:checked + .slider:before {
 }
 
 #guitar-backdrop {
-  height: 1063px;
-  width: 2249px;
   position: absolute;
   z-index: 0;
 }
