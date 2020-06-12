@@ -195,6 +195,8 @@ function createInteractableNote(coordinates) {
     pedal.className = "pedal";
     pedal.style.height = pedalSize;
     pedal.style.width = pedalSize;
+    pedal.style.position = "absolute";
+    pedal.style.borderRadius = "100%";
 
     note.appendChild(pedal);
   }
