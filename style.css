@@ -6,15 +6,6 @@ body, html {
   margin: 0;
 }
 
-.guitar {
-  height: 900px;
-  left: -360px;
-  position: absolute;
-  top: -315px;
-  transform: scaleX(-1);
-  width: 2769px;
-}
-
 .chord-name {
   z-index: 1;
   position: absolute;
@@ -81,8 +72,6 @@ input:checked + .slider:before {
 #guitar-backdrop {
   height: 1063px;
   width: 2249px;
-  left: -57px;
-  top: -438px;
   position: absolute;
   z-index: 0;
 }
@@ -90,8 +79,6 @@ input:checked + .slider:before {
 canvas {
   z-index: -1;
   position: absolute;
-  left: -57px;
-  top: -438px;
 }
 
 .interactive-guitar {
