@@ -160,16 +160,46 @@ document.getElementById("guitar-backdrop").onload = function() {
 }
 
 function createInteractableNote(coordinates) {
-
+  var note = document.createElement("div");
   var noteButton = document.createElement("span");
+  var pedalOne = document.createElement("span");
+  var pedalTwo = document.createElement("span");
+  var pedalThree = document.createElement("span");
+  var pedalFour = document.createElement("span");
+  var pedalFive = document.createElement("span");
+  var pedalSix = document.createElement("span");
+  var pedals = [pedalOne, pedalTwo, pedalThree, pedalFour, pedalFive, pedalSix];
+
   var id = allNotes[stringSelector].shift();
   stringSelector = (stringSelector + 1) % 6;
   noteButton.id = id;
   noteButton.className = "noteButton";
 
-  noteButton.style.left = (coordinates[0] - 57) + "px";
-  noteButton.style.top = (coordinates[1] - 439) + "px";
+  var x = coordinates[0] - 57;
+  var y = coordinates[1] - 439;
+  var headSize = 20;
+  var pedalSize = Math.floor(headSize * .70);
 
+  noteButton.style.left = x + "px";
+  noteButton.style.top = y + "px";
+  noteButton.style.width = headSize + "px";
+  noteButton.style.height = headSize + "px";
+
+
+  /* Pedal Positioning */
+  pedalOne.style.left = (x + (headSize / 4)) + "px";
+  pedalOne.style.top = (y - (headSize / 5)) + "px";
+  pedalOne.style.backgroundColor = "blue";
+
+  for (pedal of pedals) {
+    pedal.className = "pedal";
+    pedal.style.height = pedalSize;
+    pedal.style.width = pedalSize;
+
+    note.appendChild(pedal);
+  }
+
+  note.appendChild(noteButton);
   noteButton.innerHTML = getNote(id);
 
   noteButton.onclick = function(e) {
@@ -189,7 +219,7 @@ function createInteractableNote(coordinates) {
   }
 
   var noteContainer = document.getElementsByClassName("notes")[0];
-  noteContainer.appendChild(noteButton);
+  noteContainer.appendChild(note);
 }
 
 function getNote(id) {
