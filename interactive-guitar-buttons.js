@@ -190,6 +190,21 @@ function createInteractableNote(coordinates) {
   pedalOne.style.left = (x + (headSize / 4)) + "px";
   pedalOne.style.top = (y - (headSize / 5)) + "px";
   pedalOne.style.backgroundColor = "blue";
+  pedalTwo.style.left = (x + (headSize / 4)) + "px";
+  pedalTwo.style.top = (y - (headSize / 5)) + "px";
+  pedalTwo.style.backgroundColor = "orange";
+  pedalThree.style.left = (x + (headSize / 4)) + "px";
+  pedalThree.style.top = (y - (headSize / 5)) + "px";
+  pedalThree.style.backgroundColor = "yellow";
+  pedalFour.style.left = (x + (headSize / 4)) + "px";
+  pedalFour.style.top = (y - (headSize / 5)) + "px";
+  pedalFour.style.backgroundColor = "purple";
+  pedalFive.style.left = (x + (headSize / 4)) + "px";
+  pedalFive.style.top = (y - (headSize / 5)) + "px";
+  pedalFive.style.backgroundColor = "pink";
+  pedalSix.style.left = (x + (headSize / 4)) + "px";
+  pedalSix.style.top = (y - (headSize / 5)) + "px";
+  pedalSix.style.backgroundColor = "green";
 
   for (pedal of pedals) {
     pedal.className = "pedal";
