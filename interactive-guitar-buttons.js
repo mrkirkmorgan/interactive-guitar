@@ -132,7 +132,7 @@ document.getElementById("guitar-backdrop").onload = function() {
   var img = document.getElementById("guitar-backdrop");
   canvas.width = img.width;
   canvas.height = img.height;
-  ctx.drawImage(img, 0, 0);
+  ctx.drawImage(img, 0, 0, img.width, img.height);
   var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   
   var i;
