@@ -90,6 +90,8 @@ input:checked + .slider:before {
 canvas {
   z-index: -1;
   position: absolute;
+  left: -57px;
+  top: -438px;
 }
 
 .interactive-guitar {
