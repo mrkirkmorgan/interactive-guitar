@@ -127,11 +127,11 @@ selectedNotes.set("e", null);
 
 document.getElementById("guitar-backdrop").onload = function() {
   var canvas = document.createElement("canvas");
-  canvas.width = 1805;
-  canvas.height = 853;
 
   var ctx = canvas.getContext("2d");
   var img = document.getElementById("guitar-backdrop");
+  canvas.width = img.width;
+  canvas.height = img.height;
   ctx.drawImage(img, 0, 0);
   var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   
