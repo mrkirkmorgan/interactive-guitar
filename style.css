@@ -102,7 +102,7 @@ canvas {
 }
 
 .noteButton:hover {
-  background-color: lightgreen;
+  background-color: lightcoral;
   transition-duration: 1s;
 }
 
