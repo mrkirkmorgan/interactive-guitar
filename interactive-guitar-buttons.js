@@ -184,27 +184,34 @@ function createInteractableNote(coordinates) {
   noteButton.style.top = y + "px";
   noteButton.style.width = headSize + "px";
   noteButton.style.height = headSize + "px";
+  noteButton.style.zIndex = 9;
 
 
   /* Pedal Positioning */
   pedalOne.style.left = (x - (pedalSize / 2)) + "px";
   pedalOne.style.top = (y - pedalSize) + "px";
   pedalOne.style.backgroundColor = "blue";
+  pedalOne.style.zIndex = 5;
   pedalTwo.style.left = x + "px";
   pedalTwo.style.top = (y - (headSize / 2)) + "px";
   pedalTwo.style.backgroundColor = "orange";
+  pedalTwo.style.zIndex = 6;
   pedalThree.style.left = (x - pedalSize) + "px";
   pedalThree.style.top = (y - (headSize / 2)) + "px";
   pedalThree.style.backgroundColor = "yellow";
+  pedalThree.style.zIndex = 6;
   pedalFour.style.left = (x - (pedalSize / 2)) + "px";
   pedalFour.style.top = y + "px";
   pedalFour.style.backgroundColor = "purple";
+  pedalFour.style.zIndex = 8;
   pedalFive.style.left = (x - pedalSize) + "px";
   pedalFive.style.top = (y - (headSize / 5)) + "px";
   pedalFive.style.backgroundColor = "cyan";
+  pedalFive.style.zIndex = 7;
   pedalSix.style.left = x + "px";
   pedalSix.style.top = (y - (headSize / 5)) + "px";
   pedalSix.style.backgroundColor = "green";
+  pedalSix.style.zIndex = 7;
 
   for (pedal of pedals) {
     pedal.className = "pedal";
