@@ -201,7 +201,7 @@ function createInteractableNote(coordinates) {
   pedalFour.style.backgroundColor = "purple";
   pedalFive.style.left = (x - pedalSize) + "px";
   pedalFive.style.top = (y - (headSize / 5)) + "px";
-  pedalFive.style.backgroundColor = "pink";
+  pedalFive.style.backgroundColor = "cyan";
   pedalSix.style.left = x + "px";
   pedalSix.style.top = (y - (headSize / 5)) + "px";
   pedalSix.style.backgroundColor = "green";
